@@ -93,5 +93,8 @@
 <script src="/backend/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backend/dist/js/demo.js"></script>
+<script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+@yield('js')
+
 </body>
 </html>
