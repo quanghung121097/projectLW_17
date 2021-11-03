@@ -104,7 +104,7 @@
                             <!-- Deals Item -->
                             <div class="owl-item deals_item">
                                 @if(count($product->images) >0)
-                                <div class="deals_image"><img src="/{{$product->images[0]->path}}" alt=""></div>
+                                <div class="deals_image"><img src="/{{$product->images[0]->path ?? '' ?? ''}}" alt=""></div>
                                 @endif
                                 <div class="deals_content">
                                     <div class="deals_info_line d-flex flex-row justify-content-start">
@@ -195,7 +195,7 @@
                                     <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                         @if(isset($product->images))
                                         <a href="{{route('frontend.product',$product->id)}}">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/{{$product->images[0]->path}}" alt="" width="100px" height="100px"></div>
+                                            <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/{{$product->images[0]->path ?? ''}}" alt="" width="100px" height="100px"></div>
                                         </a>
                                         @endif
                                         <div class="product_content">
@@ -221,7 +221,7 @@
                                     <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                         @if(isset($product->images))
                                         <a href="{{route('frontend.product',$product->id)}}">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/{{$product->images[0]->path}}" alt="" width="100px" height="100px"></div>
+                                            <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/{{$product->images[0]->path ?? ''}}" alt="" width="100px" height="100px"></div>
                                         </a>
                                         @endif
                                         <div class="product_content">
@@ -266,7 +266,7 @@
                                     <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                         @if(isset($product->images))
                                         <a href="{{route('frontend.product',$product->id)}}">
-                                            <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/{{$product->images[0]->path}}" alt="" width="100px" height="100px"></div>
+                                            <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/{{$product->images[0]->path ?? ''}}" alt="" width="100px" height="100px"></div>
                                         </a>
                                         @endif
                                         <div class="product_content">
@@ -645,7 +645,7 @@
                                                 @if(count($product_new->images)>0)
                                                 <a href="{{route('frontend.product',$product_new->id)}}
                                                     ">
-                                                    <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/{{$product_new->images[0]->path}}" alt="" width="100px" height="100px"></div>
+                                                    <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="/{{$product_new->images[0]->path ?? ''}}" alt="" width="100px" height="100px"></div>
                                                 </a>
                                                 @endif
                                                 <div class="product_content">
@@ -1259,7 +1259,7 @@
                                 <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                     @if(count($product->images) >0)
                                     <a href=" {{route('frontend.product',$product->id)}}">
-                                        <div class="viewed_image"><img src="/{{$product->images[0]->path}}" alt=""></div>
+                                        <div class="viewed_image"><img src="/{{$product->images[0]->path ?? ''}}" alt=""></div>
                                     </a>
                                     @endif
                                     <div class="viewed_content text-center">
@@ -1277,7 +1277,7 @@
                                 <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
                                     @if(count($product->images) >0)
                                     <a href=" {{route('frontend.product',$product->id)}}">
-                                        <div class="viewed_image"><img src="/{{$product->images[0]->path}}" alt=""></div>
+                                        <div class="viewed_image"><img src="/{{$product->images[0]->path ?? ''}}" alt=""></div>
                                     </a>
                                     @endif
                                     <div class="viewed_content text-center">
