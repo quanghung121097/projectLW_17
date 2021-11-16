@@ -79,8 +79,8 @@ Route::group([
   Route::get('/', 'IndexController@index')->name('frontend.dashboard');
   Route::get('/shop/category{id}', 'ShopController@shop')->name('frontend.shop');
   Route::get('/product/{id}', 'ProductController@product')->name('frontend.product');
-  Route::get('/cart/', 'CartController@index')->name('frontend.cart');
-  Route::post('/makePay/', 'PayController@pay')->name('frontend.makepay');
+  Route::get('/cart', 'CartController@index')->name('frontend.cart');
+  Route::post('/makePay', 'PayController@pay')->name('frontend.makepay');
   Route::get('/cart/add/{id}', 'CartController@add')->name('frontend.cart.add');
   Route::post('/cart/add-view-product/{id}', 'CartController@add_view_product')->name('frontend.cart.addproduct');
   Route::get('/contact', 'IndexController@contact')->name('frontend.contact');
@@ -96,3 +96,8 @@ Auth::routes();
 // Route::get('/get2', 'SessionController@get2')->name('get2');
 // Route::get('/cookie/set', 'CookieController@set')->name('cookieset');
 // Route::get('/cookie/get', 'CookieController@get')->name('cookieget');
+Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
+    ->name('ckfinder_connector');
+
+Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderController@browserAction')
+    ->name('ckfinder_browser');

@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Category;
-use App\Models\Product;
 use App\User;
 use App\Models\Oder_detail;
 // use App\Models\Image;
